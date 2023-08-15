@@ -1,0 +1,39 @@
+-- **************** Plugins ***************
+--
+return {'AlexvZyl/nordic.nvim'}
+
+--require('packer').startup(function()
+--  use 'wbthomason/packer.nvim'
+--
+---- colour scheme
+--  use 'AlexvZyl/nordic.nvim'
+--
+---- dashboard (startup page)
+--  use 'glepnir/dashboard-nvim'
+--
+---- NVIM Project
+--  use 'ahmedkhalf/project.nvim'
+--
+---- tabline
+--  use { 'romgrk/barbar.nvim',
+--  requires = 'nvim-tree/nvim-web-devicons'}
+--
+---- statusline
+--  use { 'nvim-lualine/lualine.nvim', 
+--  requires = { 'kyazdan/nvim-web-devicons', opt = true }}
+--
+---- Sidebar file explorer
+--  use { 'nvim-tree/nvim-tree.lua', 
+--  requires = 'nvim-tree/nvim-web-devicons' }
+--
+---- nvim telescope
+--  use { 'nvim-telescope/telescope.nvim', tag = '0.1.0', 
+--  requires = {'nvim-lua/plenary.nvim', 'nvim-treesitter/nvim-treesitter', 'sharkdp/fd' } }
+--
+---- Commenting
+--use {'numToStr/Comment.nvim'}
+--
+---- haskell
+--use {'neovimhaskell/haskell-vim'}
+--
+--end)
