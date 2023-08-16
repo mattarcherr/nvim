@@ -1,4 +1,3 @@
--- set leader key
 vim.g.mapleader = " "
 
 
@@ -9,7 +8,7 @@ local nrm    = { noremap = true }
 --     MODE, BIND,      COMMAND,                       OPTIONS
 
 keymap("n", "ZS",       ":w<cr>",                      	nrm)        -- ZS writes file
-keymap("n", "SV",       ":source ~/.config/nvim/init.lua<cr>", nrm) -- SV reloads config
+keymap("n", "SV",       ":so %<cr>", nrm) -- SV reloads config
 
 -- nvim tree binds
 keymap("n", "<S-Tab>",  ":NvimTreeFindFileToggle<cr>", 	nrm) -- Shift-tab toggle explorer

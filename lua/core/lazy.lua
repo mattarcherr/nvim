@@ -11,10 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.runtimepath:prepend(lazypath)
 
-require("lazy").setup("core.plugins", {
+local plugins = {
+       'AlexvZyl/nordic.nvim',
+       'nvim-lualine/lualine.nvim',
+}
+
+require("lazy").setup(plugins, {
   install = {
     -- install missing plugins on startup. This doesn't increase startup time.
-    missing = false,
+    missing = true,
   },
   change_detection = {
     -- automatically check for config file changes and reload the ui
@@ -23,3 +28,4 @@ require("lazy").setup("core.plugins", {
   },
   debug = false,
 })
+

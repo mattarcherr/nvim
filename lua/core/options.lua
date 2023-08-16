@@ -17,7 +17,6 @@ vim.bo.softtabstop = 2
 vim.cmd[[autocmd FileType .hs setlocal shiftwidth=2]]
 
 -- colourscheme
-require 'nordic' .setup { theme = 'nordic', }
 vim.cmd.colorscheme 'nordic'
 
 -- set termguicolors to enable highlight groups
