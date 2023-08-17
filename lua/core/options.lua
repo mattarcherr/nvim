@@ -9,9 +9,14 @@ vim.o.number = true         -- side bar numbering
 vim.o.relativenumber = true -- relative line numbers
 
 -- default tab settings
-vim.bo.expandtab   = true
-vim.bo.shiftwidth  = 0
-vim.bo.softtabstop = 2
+vim.opt.expandtab   = true
+vim.opt.shiftwidth  = 4
+vim.opt.softtabstop = 4
+vim.opt.tabstop     = 4
+
+-- search settigns
+vim.opt.incsearch = true
+vim.opt.hlsearch  = false
 
 -- file specific tab settings
 vim.cmd[[autocmd FileType .hs setlocal shiftwidth=2]]

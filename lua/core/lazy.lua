@@ -14,6 +14,19 @@ vim.opt.runtimepath:prepend(lazypath)
 local plugins = {
        'AlexvZyl/nordic.nvim',
        'nvim-lualine/lualine.nvim',
+       {
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+       },
+       {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate'
+       },
+       {
+        'nvim-tree/nvim-tree.lua',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+       },
+       'mbbill/undotree',
 }
 
 require("lazy").setup(plugins, {

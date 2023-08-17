@@ -13,6 +13,9 @@ keymap("n", "SV",       ":so %<cr>", nrm) -- SV reloads config
 -- nvim tree binds
 keymap("n", "<S-Tab>",  ":NvimTreeFindFileToggle<cr>", 	nrm) -- Shift-tab toggle explorer
 
+-- undo tree
+keymap("n", "<leader>u",  ":UndotreeToggle<cr>", 	nrm) -- Shift-tab toggle explorer
+
 -- commenting binds
 keymap("n", "<C-_>",    "gcc",                       {noremap = false})
 keymap("v", "<C-_>",    "gcc",                       {noremap = false})
