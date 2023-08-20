@@ -14,6 +14,7 @@ vim.opt.runtimepath:prepend(lazypath)
 local plugins = {
        'AlexvZyl/nordic.nvim',
        'nvim-lualine/lualine.nvim',
+       'numToStr/Comment.nvim',
        {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' }
