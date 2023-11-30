@@ -22,7 +22,7 @@ vim.opt.hlsearch  = false
 vim.cmd[[autocmd FileType .hs setlocal shiftwidth=2]]
 
 -- colourscheme
-vim.cmd.colorscheme 'nordic'
+vim.cmd.colorscheme 'midnight'
 
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true

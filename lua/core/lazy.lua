@@ -1,3 +1,4 @@
+-- Always install lazy if not already installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,37 +13,44 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 
 local plugins = {
-       'AlexvZyl/nordic.nvim',
-       'nvim-lualine/lualine.nvim',
-       'numToStr/Comment.nvim',
-       {
-        'nvim-telescope/telescope.nvim',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-       },
-       {
-        'nvim-treesitter/nvim-treesitter',
-        build = ':TSUpdate'
-       },
-       {
-        'nvim-tree/nvim-tree.lua',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-       },
-       'mbbill/undotree',
-       {
-       'VonHeikemen/lsp-zero.nvim',
-       branch = 'v2.x',
-       dependencies = {
-           -- LSP Support
-           {'neovim/nvim-lspconfig'},             -- Required
-           {'williamboman/mason.nvim'},           -- Optional
-           {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-           -- Autocompletion
-           {'hrsh7th/nvim-cmp'},     -- Required
-           {'hrsh7th/cmp-nvim-lsp'}, -- Required
-           {'L3MON4D3/LuaSnip'},     -- Required
-          }
-      }
+	    -- Colour Scheme
+          'dasupradyumna/midnight.nvim',
+	    -- Statusline in lua
+          'nvim-lualine/lualine.nvim',
+        -- Telescope fuzzy finder
+        {
+           'nvim-telescope/telescope.nvim',
+           dependencies = { 'nvim-lua/plenary.nvim' }
+        },
+        -- Tree-sitter
+        {
+            'nvim-treesitter/nvim-treesitter',
+            build = ':TSUpdate'
+        },
+        -- NvimTree
+        {
+            'nvim-tree/nvim-tree.lua',
+             dependencies = { 'nvim-tree/nvim-web-devicons' },
+        },
+	    -- LSP 
+        {
+           'VonHeikemen/lsp-zero.nvim',
+             branch = 'v2.x',
+             dependencies = {
+               -- LSP Support
+               {'neovim/nvim-lspconfig'},             -- Required
+               {'williamboman/mason.nvim'},           -- Optional
+               {'williamboman/mason-lspconfig.nvim'}, -- Optional
+        
+               -- Autocompletion
+               {'hrsh7th/nvim-cmp'},     -- Required
+               {'hrsh7th/cmp-nvim-lsp'}, -- Required
+               {'L3MON4D3/LuaSnip'},     -- Required
+            },
+        },
+        --  Utilities
+          'numToStr/Comment.nvim', -- Toggle comment selection 
+          'mbbill/undotree',       -- Visualizes the undo history
 }
 
 require("lazy").setup(plugins, {
