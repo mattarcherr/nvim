@@ -1,4 +1,6 @@
 require('core.plugins.treesitter')
 require('core.plugins.nvimtree')
 require('core.plugins.lsp-zero')
+require('core.plugins.lualine')
+require('core.plugins.dashboard')
 require('Comment').setup()

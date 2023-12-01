@@ -49,8 +49,9 @@ local plugins = {
             },
         },
         --  Utilities
-          'numToStr/Comment.nvim', -- Toggle comment selection 
-          'mbbill/undotree',       -- Visualizes the undo history
+          'numToStr/Comment.nvim',   -- Toggle comment selection 
+          'mbbill/undotree',         -- Visualizes the undo history
+          'nvimdev/dashboard-nvim',  -- Adds a custom dashboard to nvim startup
 }
 
 require("lazy").setup(plugins, {
