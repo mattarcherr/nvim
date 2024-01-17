@@ -14,20 +14,22 @@ keymap("n", "SV",       ":so %<cr>", nrm) -- SV reloads config
 keymap("n", "<S-Tab>",  ":NvimTreeFindFileToggle<cr>", 	nrm) -- Shift-tab toggle explorer
 
 -- undo tree
-keymap("n", "<leader>u",  ":UndotreeToggle<cr>", 	nrm) -- Shift-tab toggle explorer
+keymap("n", "<leader>u",  ":UndotreeToggle<cr>", 	    nrm) -- Shift-tab toggle explorer
 
 -- commenting binds
-keymap("n", "<C-_>",    "gcc",                       {noremap = false})
-keymap("v", "<C-_>",    "gcc",                       {noremap = false})
+keymap("n", "<C-_>",    "gcc",                          {noremap = false})
+keymap("v", "<C-_>",    "gcc",                          {noremap = false})
 
 -- tab binds
 keymap("n", "<C-n>",    ":tabnew<cr>",                 	nrm) -- Crtl-n opens new tab
 
 -- telescope binds
-keymap("n", "<S-F>",    ":cd /home/matt | :Telescope find_files<cr>", nrm) -- Shift-F to open telescope
+keymap("n", "TT",    ":Telescope<cr>",                  nrm) -- Shift-F telescope from ~
+keymap("n", "TF",    ":cd /home/matt | :Telescope find_files<cr>", nrm) -- Shift-F telescope from ~
+keymap("n", "TB",    ":Telescope buffers<cr>",          nrm) -- Shift-F to open telescope
 
 -- window keybinds
-keymap("n", "WN",       ":belowright new<cr>",          nrm) -- WN new window
-keymap("n", "WQ",       ":quit<cr>",                   	nrm) -- WQ quit window
+keymap("n", "WN",       ":belowright new<cr>",          nrm)   -- WN new window
+keymap("n", "WQ",       ":quit<cr>",                   	nrm)   -- WQ quit window
 keymap("n", "WT",       ":belowright 17sp +terminal<cr>", nrm) -- WT terminal window
-keymap("n", "WS",       ":belowright sp<cr>",           nrm) -- WS split window
+keymap("n", "WS",       ":belowright sp<cr>",           nrm)   -- WS split window
