@@ -17,6 +17,8 @@ local plugins = {
           'dasupradyumna/midnight.nvim',
 	    -- Statusline in lua
           'nvim-lualine/lualine.nvim',
+        -- which-key
+          'folke/which-key.nvim',
         -- Telescope fuzzy finder
         {
            'nvim-telescope/telescope.nvim',
