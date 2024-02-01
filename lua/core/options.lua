@@ -18,6 +18,10 @@ vim.opt.tabstop     = 4
 vim.opt.incsearch = true
 vim.opt.hlsearch  = false
 
+-- WhichKey
+vim.o.timeout = true
+vim.o.timeoutlen = 1500
+
 -- file specific tab settings
 vim.cmd[[autocmd FileType .hs setlocal shiftwidth=2]]
 
