@@ -13,10 +13,18 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
-  mapping = {
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),l
+    },
+    mapping = {
     -- Confirm item
     ['<C-Space>'] = cmp.mapping.confirm({select = true}),
-  }
+    },
+    formatting = {
+        fields = { "menu", "abbr", "kind" },
+    },
 })
+
 
 lsp.setup()
