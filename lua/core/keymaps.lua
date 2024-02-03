@@ -9,20 +9,21 @@ local nrm    = { noremap = true }
 
 keymap("n", "ZS",       ":w<cr>",                      	nrm) -- ZS writes file
 keymap("n", "SV",       ":so %<cr>",                    nrm) -- SV reloads config
+keymap("n", "<cr>",     "ciw",                          nrm) -- Enter replaces a word 
 
 -- nvim tree binds
 keymap("n", "<S-Tab>",  ":NvimTreeFindFileToggle<cr>", 	nrm) -- Shift-tab toggle explorer
 
 -- undo tree
-keymap("n", "<leader>u",  ":UndotreeToggle<cr>", 	    nrm) -- Shift-tab toggle explorer
+keymap("n", "U",        ":UndotreeToggle<cr>", 	        nrm) -- Shift-tab toggle explorer
 
 -- commenting binds
 keymap("n", "<C-_>",    "gcc",            {noremap = false}) -- Comment / Uncomment
 keymap("v", "<C-_>",    "gcc",            {noremap = false}) -- Comment / Uncomment
 
 -- buffer binds
-keymap("n", "<C-n>|BN",    ":enew<cr>",                 	nrm) -- Crtl-n opens new tab
-keymap("n", "BD",    ":bd<cr>",                 	nrm) -- Crtl-n opens new tab
+keymap("n", "BN",       ":enew<cr>",                    nrm) -- Crtl-n opens new tab
+keymap("n", "BQ",       ":bd<cr>",                 	    nrm) -- Crtl-n opens new tab
 
 -- telescope binds
 keymap("n", "TT",    ":Telescope<cr>",                  nrm) -- T-T telescope from ~
@@ -36,7 +37,8 @@ end)
 
 
 -- window keybinds
-keymap("n", "WN",       ":belowright new<cr>",          nrm)   -- WN new window
-keymap("n", "WQ",       ":quit<cr>",                   	nrm)   -- WQ quit window
-keymap("n", "WT",       ":belowright 17sp +terminal<cr>", nrm) -- WT terminal window
-keymap("n", "WS",       ":belowright sp<cr>",           nrm)   -- WS split window
+keymap("n", "WN",       ":new<cr>",                     nrm) -- WN new window
+keymap("n", "WQ",       ":bd!<cr>",                   	nrm) -- WQ quit window
+keymap("n", "WT",       ":17sp +te<cr>",                nrm) -- WT terminal window
+keymap("n", "WS",       ":sp<cr>",                      nrm) -- WS split window
+keymap("n", "WF",       ":on<cr>",                      nrm) -- WF focuses window

@@ -5,6 +5,10 @@
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- buffer options
+vim.o.splitright = true
+vim.o.splitbelow = true
+
 vim.o.number = true         -- side bar numbering
 vim.o.relativenumber = true -- relative line numbers
 
