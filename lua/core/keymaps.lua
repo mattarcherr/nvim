@@ -24,15 +24,17 @@ keymap("v", "<C-_>",    "gcc",            {noremap = false}) -- Comment / Uncomm
 -- buffer binds
 keymap("n", "BN",       ":enew<cr>",                    nrm) -- Crtl-n opens new tab
 keymap("n", "BQ",       ":bd<cr>",                 	    nrm) -- Crtl-n opens new tab
+keymap("n", "<Tab>",    ":bn<cr>",                      nrm) -- Tab for next buffer
+keymap("n", "<A-Tab>",  ":bp<cr>",                      nrm) -- Alt-tab for previous buffer
 
 -- telescope binds
 keymap("n", "TT",    ":Telescope<cr>",                  nrm) -- T-T telescope from ~
 keymap("n", "TF",    ":Telescope find_files<cr>",       nrm) -- T-F telescope from ~
 keymap("n", "TB",    ":Telescope buffers<cr>",          nrm) -- T-B to view open buffers
+keymap("n", "TR",    ":Telescope resume<cr>",           nrm) -- T-R to resume previous telescope
 keymap("n", "TS",    function()                              -- T-S enter directory to view
     local input = vim.fn.input("Enter directory: ")
-    vim.cmd(string.format("cd %s", input))
-    vim.cmd("Telescope find_files")
+    require("telescope.builtin").find_files({cwd=input})
 end)
 
 
