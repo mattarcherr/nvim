@@ -19,8 +19,8 @@ cmp.setup({
     },
     mapping = {
     -- Confirm item
-    ['<C-Space>'] = cmp.mapping.confirm({select = true}),
-    ['<Tab>']     = cmp.mapping.select_next_item({ behaviour = cmp.SelectBehavior.Select }),
+        ['<C-Space>'] = cmp.mapping.confirm({select = true}),
+        ['<Tab>']     = cmp.mapping.select_next_item({ behaviour = cmp.SelectBehavior.Select }),
     },
     formatting = {
         fields = { "menu", "abbr", "kind" },

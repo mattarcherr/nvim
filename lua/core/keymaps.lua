@@ -25,7 +25,8 @@ keymap("v", "<C-_>",    "gcc",            {noremap = false}) -- Comment / Uncomm
 keymap("n", "BN",       ":enew<cr>",                    nrm) -- Crtl-n opens new tab
 keymap("n", "BQ",       ":bd<cr>",                 	    nrm) -- Crtl-n opens new tab
 keymap("n", "<Tab>",    ":bn<cr>",                      nrm) -- Tab for next buffer
-keymap("n", "<A-Tab>",  ":bp<cr>",                      nrm) -- Alt-tab for previous buffer
+keymap("n", "<A-Tab>",  ":bp<cr>",                      nrm) -- Tab for next buffer
+keymap("n", "b<Tab>",  ":b#<cr>",                      nrm) -- Alt-tab for previous buffer
 
 -- telescope binds
 keymap("n", "TT",    ":Telescope<cr>",                  nrm) -- T-T telescope from ~
