@@ -13,6 +13,8 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
+    view = {l
+    },
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
@@ -24,6 +26,20 @@ cmp.setup({
     },
     formatting = {
         fields = { "menu", "abbr", "kind" },
+
+        format = function(entry, vim_item) 
+            -- Source
+            vim_item.menu = ({
+	            buffer   = "BUF |",
+	            nvim_lsp = "LSP |", 
+	            luasnip  = "LuaSnip |",
+	            nvim_lua = "Lua |",
+                latex_symbols = "[LaTeX] |",
+            })[entry.source.name]
+            return vim_item
+            -- From lspkind
+        end
+
     },
 })
 

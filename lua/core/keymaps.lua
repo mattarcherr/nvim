@@ -26,13 +26,14 @@ keymap("n", "BN",       ":enew<cr>",                    nrm) -- Crtl-n opens new
 keymap("n", "BQ",       ":bd<cr>",                 	    nrm) -- Crtl-n opens new tab
 keymap("n", "<Tab>",    ":bn<cr>",                      nrm) -- Tab for next buffer
 keymap("n", "<A-Tab>",  ":bp<cr>",                      nrm) -- Tab for next buffer
-keymap("n", "b<Tab>",  ":b#<cr>",                      nrm) -- Alt-tab for previous buffer
+keymap("n", "b<Tab>",   ":b#<cr>",                      nrm) -- Alt-tab for previous buffer
 
 -- telescope binds
-keymap("n", "TT",    ":Telescope<cr>",                  nrm) -- T-T telescope from ~
-keymap("n", "TF",    ":Telescope find_files<cr>",       nrm) -- T-F telescope from ~
-keymap("n", "TB",    ":Telescope buffers<cr>",          nrm) -- T-B to view open buffers
-keymap("n", "TR",    ":Telescope resume<cr>",           nrm) -- T-R to resume previous telescope
+keymap("n", "TT",       ":Telescope<cr>",               nrm) -- T-T telescope from ~
+keymap("n", "TF",       ":Telescope find_files<cr>",    nrm) -- T-F telescope from ~
+keymap("n", "TB",       ":Telescope buffers<cr>",       nrm) -- T-B to view open buffers
+keymap("n", "TN",       ":Telescope file_browser<cr>",  nrm) -- T-N to open file browser
+keymap("n", "TR",       ":Telescope resume<cr>",        nrm) -- T-R to resume previous telescope
 keymap("n", "TS",    function()                              -- T-S enter directory to view
     local input = vim.fn.input("Enter directory: ")
     require("telescope.builtin").find_files({cwd=input})

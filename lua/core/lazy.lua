@@ -22,7 +22,10 @@ local plugins = {
         -- Telescope fuzzy finder
         {
            'nvim-telescope/telescope.nvim',
-           dependencies = { 'nvim-lua/plenary.nvim' }
+           dependencies = {
+               {'nvim-telescope/telescope-file-browser.nvim'},
+               {'nvim-lua/plenary.nvim'},
+           },
         },
         -- bufferline
         {
