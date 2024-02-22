@@ -23,7 +23,7 @@ require('dashboard').setup {
         {
           desc = ' dotfiles',
           group = 'Number',
-          action = 'Telescope dotfiles',
+          action = 'lua require("telescope.builtin").find_files({cwd="~/.config/nvim"})',
           key = 'd',
         },
       },

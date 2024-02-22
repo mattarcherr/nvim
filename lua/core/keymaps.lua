@@ -28,6 +28,14 @@ keymap("n", "<Tab>",    ":bn<cr>",                      nrm) -- Tab for next buf
 keymap("n", "<A-Tab>",  ":bp<cr>",                      nrm) -- Tab for next buffer
 keymap("n", "b<Tab>",   ":b#<cr>",                      nrm) -- Alt-tab for previous buffer
 
+-- FTerm binds
+keymap("n", "FT",       ':FTermToggle<cr>',             nrm) -- FT toggle floating terminal
+keymap("n", "FR",    function()                              -- FR enter command to run in terminal
+    local input = vim.fn.input("Enter command: ")
+    require("telescope.builtin").find_files({cwd=input})
+    require("FTerm").run(input)
+end)
+
 -- telescope binds
 keymap("n", "TT",       ":Telescope<cr>",               nrm) -- T-T telescope from ~
 keymap("n", "TF",       ":Telescope find_files<cr>",    nrm) -- T-F telescope from ~

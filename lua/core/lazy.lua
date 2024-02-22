@@ -19,6 +19,8 @@ local plugins = {
           'nvim-lualine/lualine.nvim',
         -- which-key
           'folke/which-key.nvim',
+        -- Floating Terminal
+           'numToStr/FTerm.nvim',
         -- Telescope fuzzy finder
         {
            'nvim-telescope/telescope.nvim',
