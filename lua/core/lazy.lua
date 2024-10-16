@@ -17,10 +17,11 @@ local plugins = {
           'dasupradyumna/midnight.nvim',
 	    -- Statusline in lua
           'nvim-lualine/lualine.nvim',
-        -- which-key
-          'folke/which-key.nvim',
         -- Floating Terminal
            'numToStr/FTerm.nvim',
+        -- which-key
+          'folke/which-key.nvim',
+          'echasnovski/mini.icons',
         -- Telescope fuzzy finder
         {
            'nvim-telescope/telescope.nvim',

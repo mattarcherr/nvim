@@ -47,7 +47,6 @@ keymap("n", "TS",    function()                              -- T-S enter direct
     require("telescope.builtin").find_files({cwd=input})
 end)
 
-
 -- window keybinds
 keymap("n", "WN",       ":new<cr>",                     nrm) -- WN new window
 keymap("n", "WQ",       ":bd!<cr>",                   	nrm) -- WQ quit window
